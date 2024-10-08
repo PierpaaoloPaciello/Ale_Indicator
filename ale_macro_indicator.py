@@ -112,7 +112,7 @@ pivot_data.index = pd.to_datetime(pivot_data.index, errors='coerce')
 # Display processed Pivot Data instead of CLI
 st.subheader("Processed OECD CLI Data")
 st.markdown("The table below shows the processed OECD CLI data used for **Diffusion Index** calculations and trend identification.")
-st.dataframe(pivot_data.head(), height=150, width=800)
+st.dataframe(pivot_data.tail(12), height=150, width=900)
 
 # Diffusion Index calculation
 pivot_data_change = pivot_data.diff()
